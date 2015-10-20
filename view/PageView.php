@@ -4,6 +4,7 @@ namespace view;
 class PageView{
 
     private $pages;
+    private $currentPage;
 
     public function __construct(\model\PageCollection $pages){
         $this->pages = $pages;
@@ -11,7 +12,7 @@ class PageView{
 
     public function getPageContentHTML() {
         return '<div id="wrapper">
-                    <h1>PHP-CMS Public page</h1>
+                    <h1></h1>
                     <div id="menu">'.$this->getMenuListHTML().'</div>
                     <div id="content">'.$this->pages->getSelectedPage()->getPageContent().'</div>
                     <a href="?'.\Settings::ADMIN_PANEL_NAME.'">Admin login</a>

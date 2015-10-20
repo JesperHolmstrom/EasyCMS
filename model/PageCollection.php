@@ -5,19 +5,22 @@ class PageCollection{
     private $pages;
     private $selectedPage;
 
+    public function __construct(PageModel $page){
+        $this->pages[] = $page;
+        $this->selectedPage = $page;
+    }
+
     public function add(PageModel $page){
         $this->pages[] = $page;
-        if($this->selectedPage == null)
-            $this->selectPage($page);
     }
 
     public function getPages(){
         return $this->pages;
     }
 
-    public function selectPage($pageURL){
+    public function selectPage($url){
         foreach($this->pages as $page){
-            if(strcasecmp($page->getPageURL(),"hem")){
+            if(strcmp($page->getPageURL(),$url) === 0){
                 $this->selectedPage = $page;
             }
         }

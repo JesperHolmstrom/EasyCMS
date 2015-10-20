@@ -10,7 +10,8 @@ class PageController{
         $this->view =  $view;
     }
     public function doControl(){
-        if($this->view->userWantsPage())
+        if($this->view->userWantsPage()){
             $this->view->setCurrentPage();
+        }
     }
 }

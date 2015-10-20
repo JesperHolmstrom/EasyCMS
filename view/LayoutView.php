@@ -20,7 +20,7 @@ class LayoutView {
     <html>
       <head>
         <meta charset="utf-8">
-        <title>PHP-CMS - Admin Panel</title>
+        <title><?php echo \Settings::HOMEPAGE_TITLE ?> - Admin Panel</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
       </head>
       <body>
@@ -48,7 +48,7 @@ class LayoutView {
         <html>
         <head>
             <meta charset="utf-8">
-            <title><?php echo $pv->getPageTitle(); ?></title>
+            <title><?php echo \Settings::HOMEPAGE_TITLE .' - '. $pv->getPageTitle(); ?></title>
             <link rel="stylesheet" type="text/css" href="css/style.css" />
         </head>
         <body>

@@ -32,13 +32,16 @@ $ac = new \controller\AdminPanelController($av);
 
 //Create some pages
 $page = new \model\PageModel("Hem", "hem", '<h1>Hem</h1> <p>And this is some content that will be displayed in the content</p>');
-$page2 = new \model\PageModel("Info", "info", "<h1>yes this is a headline</h1>");
-$page3 = new \model\PageModel("Kontakt", "kontakt", "<h1>yes this is a headline</h1>");
+$page2 = new \model\PageModel("Info", "info", "<h1>Content for Infolol</h1>");
+$page3 = new \model\PageModel("Kontakt", "kontakt", "<h1>Content for Kontaktlol</h1>");
+$page4 = new \model\PageModel("Mail", "mail", "<h1>Content for Mail</h1>");
+$page5 = new \model\PageModel("Order", "order", "<h1>Content for Order</h1>");
 //Create the pagecollection and dependency inject into the pageview and pagecontroller
-$pages = new \model\PageCollection();
-$pages->add($page);
+$pages = new \model\PageCollection($page);
 $pages->add($page2);
 $pages->add($page3);
+$pages->add($page4);
+$pages->add($page5);
 $pv = new \view\PageView($pages);
 $pc = new \controller\PageController($pages, $pv);
 
