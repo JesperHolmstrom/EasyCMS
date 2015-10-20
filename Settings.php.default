@@ -1,0 +1,52 @@
+<?php
+/**
+  * Solution for assignment 2
+  * @author Daniel Toll
+  */
+/**
+ * The settings file contains installation specific information
+ * 
+ */
+class Settings {
+
+
+	/**
+	 * The app session name allows different apps on the same webhotel to share a virtual session
+	 */
+	const APP_SESSION_NAME = "LoginLab";
+
+	/**
+	 * Database connection settings
+	 */
+	const DB_HOST = "localhost";
+	const DB_USER = "root";
+	const DB_PASS = "password";
+	const DB_TABLE = "PHPCMS";
+	
+	/**
+	 * Username of admin
+	 */
+	const USERNAME = "Admin";
+
+	/**
+	 * Password of admin
+	 */
+	const PASSWORD = "Password";
+
+	/**
+	 * Path to folder writable by www-data but not accessable by webserver
+	 */
+	const DATAPATH = "./data/";
+
+	/**
+	 * Salt for creating temporary passwords
+	 * Should be a random string like "feje3-#GS"
+	 */
+	const SALT = "#¤%#¤%MASFSFSDF";
+
+	/**
+	 * Show errors 
+	 * boolean true | false
+	 */
+	const DISPLAY_ERRORS = true;
+}
