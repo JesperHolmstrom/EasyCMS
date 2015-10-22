@@ -11,13 +11,17 @@ class PageView{
     }
 
     public function getPageContentHTML() {
-        return '<div id="wrapper">
-                    <h1></h1>
+        return '<main>
+                    <header>
+                        <h1>'. \Settings::HOMEPAGE_TITLE .'>'.$this->pages->getSelectedPage()->getPageTitle().'</h1>
+                    </header>
                     <div id="menu">'.$this->getMenuListHTML().'</div>
-                    <div id="content">'.$this->pages->getSelectedPage()->getPageContent().'</div>
+                    <div id="content"><h1>'.$this->pages->getSelectedPage()->getPageTitle()."</h1>". $this->pages->getSelectedPage()->getPageContent().'</div>
+                </main>
+                <footer>
                     <a href="?'.\Settings::ADMIN_PANEL_NAME.'">Admin login</a>
-                    <em>This site uses cookies to improve user experience. By continuing to browse the site you are agreeing to our use of cookies.</em>
-                </div>';
+                    <p>This site uses cookies to improve user experience. By continuing to browse the site you are agreeing to our use of cookies.</p>
+                </footer>';
     }
 
     public function getMenuListHTML(){
@@ -30,7 +34,9 @@ class PageView{
     }
 
     public function getPageTitle(){
-        return $this->pages->getSelectedPage()->getPageTitle();
+        $page = $this->pages->getSelectedPage();
+        if($page != null)
+            return $page->getPageTitle();
     }
 
     public function userWantsPage(){

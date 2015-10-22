@@ -46,10 +46,9 @@ class LoginView {
 	/**
 	 * @param \model\LoginModel $model
 	 */
-	public function __construct(\model\LoginModel $model, \view\AdminPanelView $adminView) {
+	public function __construct(\model\LoginModel $model) {
 		self::$sessionSaveLocation .= \Settings::APP_SESSION_NAME;
 		$this->model = $model;
-		$this->adminView = $adminView;
 	}
 
 	/**
@@ -123,7 +122,7 @@ class LoginView {
 	 */
 	public function response() {
 		if ($this->model->isLoggedIn($this->getUserClient())) {
-			return $this->doLogoutForm();
+			return $this->doAdminPanel();
 		} else {
 			return $this->doLoginForm();
 		}
@@ -134,7 +133,7 @@ class LoginView {
 	 * @sideeffect Sets cookies!
 	 * @return [String HTML
 	 */
-	private function doLogoutForm() {
+	private function doAdminPanel() {
 		$message = "";
 		//Correct Login Message
 		if ($this->loginHasSucceeded === true) {
@@ -231,7 +230,7 @@ class LoginView {
 		return "<form method='post' >
 			<p id='" . self::$messageId . "'>$message</p>
 			<input type='submit' name='" . self::$logout . "' value='logout'/>
-			</form>".$this->adminView->render();
+			</form>";
 	}
 
 	private function generateLoginFormHTML($message) {
