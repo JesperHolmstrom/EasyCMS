@@ -28,7 +28,7 @@ class PageView{
         $links = "";
         $pageCollection = $this->pages->getPages();
         foreach($pageCollection as $page){
-            $links .= '<li><a href="?'.\Settings::PAGE_NAME.'='. $page->getPageURL() .'">' . $page->getPageTitle() . '</a></li>';
+            $links .= '<li><a href="?'.\Settings::READ_PAGE.'='. $page->getPageURL() .'">' . $page->getPageTitle() . '</a></li>';
         }
         return $links;
     }
@@ -40,12 +40,12 @@ class PageView{
     }
 
     public function userWantsPage(){
-        return isset($_GET[\Settings::PAGE_NAME]);
+        return isset($_GET[\Settings::READ_PAGE]);
     }
 
     public function setCurrentPage(){
-        if(isset($_GET[\Settings::PAGE_NAME])){
-            $url = $_GET[\Settings::PAGE_NAME];
+        if(isset($_GET[\Settings::READ_PAGE])){
+            $url = $_GET[\Settings::READ_PAGE];
             $this->pages->selectPage($url);
         }
     }

@@ -25,14 +25,12 @@ session_start();
 
 //Dependency injection
 $m = new \model\LoginModel();
-$av = new \view\AdminPanelView();
 $v = new \view\LoginView($m);
 $c = new \controller\LoginController($m, $v);
 $pd = new \model\PageDAL();
 
-//Create some pages
-//Create the pagecollection and dependency inject into the pageview and pagecontroller
 $pages = new \model\PageCollection($pd);
+$av = new \view\AdminPanelView($pages);
 $pv = new \view\PageView($pages);
 $pc = new \controller\PageController($pages, $pv);
 $ac = new \controller\AdminPanelController($av, $pages);

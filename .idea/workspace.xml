@@ -25,9 +25,17 @@
       <file leaf-file-name="LayoutView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/LayoutView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="-18.807692">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="37" selection-end-column="31" />
+              <folding>
+                <marker date="1445608666629" expanded="true" signature="1123:1141" placeholder="..." />
+                <marker date="1445608666629" expanded="true" signature="1123:1861" placeholder="..." />
+                <marker date="1445608666629" expanded="true" signature="1223:1347" placeholder="..." />
+                <marker date="1445608666629" expanded="true" signature="1389:1610" placeholder="..." />
+                <marker date="1445608666629" expanded="true" signature="1753:1861" placeholder="..." />
+                <marker date="1445608666629" expanded="true" signature="1768:1861" placeholder="..." />
+                <marker date="1445608666629" expanded="true" signature="2005:2073" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,53 +43,58 @@
       <file leaf-file-name="PageView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/PageView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
+            <state vertical-scroll-proportion="-10.133333">
+              <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
               <folding>
-                <marker date="1445531376859" expanded="true" signature="252:538" placeholder="..." />
-                <marker date="1445531376859" expanded="true" signature="252:542" placeholder="..." />
-                <marker date="1445531376859" expanded="true" signature="252:650" placeholder="..." />
-                <marker date="1445531376859" expanded="true" signature="252:681" placeholder="..." />
-                <marker date="1445531376859" expanded="true" signature="281:428" placeholder="..." />
-                <marker date="1445531376859" expanded="true" signature="706:962" placeholder="..." />
+                <marker date="1445609668843" expanded="true" signature="252:681" placeholder="..." />
+                <marker date="1445609668843" expanded="true" signature="281:428" placeholder="..." />
+                <marker date="1445609668843" expanded="true" signature="706:962" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminPanelView.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/LoginView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.0097086">
+              <caret line="230" column="61" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="61" />
+              <folding>
+                <element signature="e#6#68#0#PHP" expanded="true" />
+                <marker date="1445609155936" expanded="true" signature="5656:5701" placeholder="..." />
+                <marker date="1445609155936" expanded="true" signature="5656:5768" placeholder="..." />
+                <marker date="1445609155936" expanded="true" signature="5789:6451" placeholder="..." />
+                <marker date="1445609155936" expanded="true" signature="5806:6440" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminPanelView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/AdminPanelView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70689654">
-              <caret line="99" column="61" selection-start-line="99" selection-start-column="61" selection-end-line="99" selection-end-column="61" />
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="116" column="46" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="46" />
               <folding>
-                <marker date="1445534441713" expanded="true" signature="2768:3494" placeholder="..." />
-                <marker date="1445534441713" expanded="true" signature="2784:2825" placeholder="..." />
-                <marker date="1445534441713" expanded="true" signature="2784:3273" placeholder="..." />
-                <marker date="1445534441713" expanded="true" signature="2784:3275" placeholder="..." />
-                <marker date="1445534441713" expanded="true" signature="2784:3284" placeholder="..." />
-                <marker date="1445534441713" expanded="true" signature="2784:3286" placeholder="..." />
-                <marker date="1445534441713" expanded="true" signature="2784:3483" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="6531:6639" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="6551:6634" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="6835:6983" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="6854:6982" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="6979:6982" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="7069:7795" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="7085:7784" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="7906:8625" placeholder="..." />
+                <marker date="1445613325729" expanded="true" signature="7922:8614" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/PageController.php">
+      <file leaf-file-name="PageCollection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/PageCollection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/LoginController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+            <state vertical-scroll-proportion="-15.692307">
+              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -90,12 +103,24 @@
       <file leaf-file-name="PageDAL.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/PageDAL.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.26923">
-              <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+            <state vertical-scroll-proportion="-25.346153">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding>
-                <marker date="1445529938189" expanded="true" signature="666:680" placeholder="SELECT * FRO..." />
-                <marker date="1445529938189" expanded="true" signature="1746:1827" placeholder="INSERT INTO ..." />
+                <marker date="1445612255124" expanded="true" signature="666:680" placeholder="SELECT * FRO..." />
+                <marker date="1445612255124" expanded="true" signature="1746:1827" placeholder="INSERT INTO ..." />
+                <marker date="1445612255124" expanded="true" signature="2839:2878" placeholder="DELETE FROM ..." />
+                <marker date="1445612255124" expanded="true" signature="2839:2882" placeholder="DELETE FROM ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Settings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.034483">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,31 +135,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TempCredentials.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/TempCredentials.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageCollection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/PageCollection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.26923">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="35" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminPanelController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminPanelController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/AdminPanelController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.5224586">
+              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.692308">
+              <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -156,15 +171,15 @@
         <option value="$PROJECT_DIR$/controller/LoginController.php" />
         <option value="$PROJECT_DIR$/model/PageModel.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/view/LoginView.php" />
-        <option value="$PROJECT_DIR$/view/LayoutView.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Settings.php" />
         <option value="$PROJECT_DIR$/controller/PageController.php" />
-        <option value="$PROJECT_DIR$/model/PageDAL.php" />
-        <option value="$PROJECT_DIR$/model/PageCollection.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/view/LayoutView.php" />
+        <option value="$PROJECT_DIR$/view/LoginView.php" />
+        <option value="$PROJECT_DIR$/Settings.php" />
         <option value="$PROJECT_DIR$/view/PageView.php" />
+        <option value="$PROJECT_DIR$/model/PageCollection.php" />
+        <option value="$PROJECT_DIR$/model/PageDAL.php" />
         <option value="$PROJECT_DIR$/controller/AdminPanelController.php" />
         <option value="$PROJECT_DIR$/view/AdminPanelView.php" />
       </list>
@@ -364,6 +379,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -374,7 +390,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -430,12 +445,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding>
-            <marker date="1445531376859" expanded="true" signature="252:538" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="252:542" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="252:650" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="252:681" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="281:428" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="706:962" placeholder="..." />
+            <marker date="1445609668843" expanded="true" signature="252:681" placeholder="..." />
+            <marker date="1445609668843" expanded="true" signature="281:428" placeholder="..." />
+            <marker date="1445609668843" expanded="true" signature="706:962" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -445,13 +457,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="94" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
           <folding>
-            <marker date="1445534441713" expanded="true" signature="2768:3494" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:2825" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3273" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3275" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3284" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3286" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3483" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6531:6639" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6551:6634" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6835:6983" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6854:6982" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6979:6982" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7069:7795" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7085:7784" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7906:8625" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7922:8614" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -477,8 +491,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="87" selection-start-line="61" selection-start-column="87" selection-end-line="61" selection-end-column="87" />
           <folding>
-            <marker date="1445529938189" expanded="true" signature="666:680" placeholder="SELECT * FRO..." />
-            <marker date="1445529938189" expanded="true" signature="1746:1827" placeholder="INSERT INTO ..." />
+            <marker date="1445612255124" expanded="true" signature="666:680" placeholder="SELECT * FRO..." />
+            <marker date="1445612255124" expanded="true" signature="1746:1827" placeholder="INSERT INTO ..." />
+            <marker date="1445612255124" expanded="true" signature="2839:2878" placeholder="DELETE FROM ..." />
+            <marker date="1445612255124" expanded="true" signature="2839:2882" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -521,32 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Settings.php">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.730769">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/LoggedInUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/TempCredentialsDAL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.346153">
@@ -571,40 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/LoginModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/LoginView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-154.3077">
-          <caret line="236" column="8" selection-start-line="236" selection-start-column="8" selection-end-line="252" selection-end-column="10" />
-          <folding>
-            <element signature="e#6#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/PageModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/TempCredentials.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -613,52 +569,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/PageDAL.php">
+    <entry file="file://$PROJECT_DIR$/model/LoggedInUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.26923">
-          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-          <folding>
-            <marker date="1445529938189" expanded="true" signature="666:680" placeholder="SELECT * FRO..." />
-            <marker date="1445529938189" expanded="true" signature="1746:1827" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/PageCollection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.26923">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="35" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/LayoutView.php">
+    <entry file="file://$PROJECT_DIR$/model/LoginModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/PageView.php">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
-          <folding>
-            <marker date="1445531376859" expanded="true" signature="252:538" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="252:542" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="252:650" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="252:681" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="281:428" placeholder="..." />
-            <marker date="1445531376859" expanded="true" signature="706:962" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/PageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -671,27 +609,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/AdminPanelController.php">
+    <entry file="file://$PROJECT_DIR$/view/LayoutView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state vertical-scroll-proportion="-18.807692">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="37" selection-end-column="31" />
+          <folding>
+            <marker date="1445608666629" expanded="true" signature="1123:1141" placeholder="..." />
+            <marker date="1445608666629" expanded="true" signature="1123:1861" placeholder="..." />
+            <marker date="1445608666629" expanded="true" signature="1223:1347" placeholder="..." />
+            <marker date="1445608666629" expanded="true" signature="1389:1610" placeholder="..." />
+            <marker date="1445608666629" expanded="true" signature="1753:1861" placeholder="..." />
+            <marker date="1445608666629" expanded="true" signature="1768:1861" placeholder="..." />
+            <marker date="1445608666629" expanded="true" signature="2005:2073" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/LoginView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0097086">
+          <caret line="230" column="61" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="61" />
+          <folding>
+            <element signature="e#6#68#0#PHP" expanded="true" />
+            <marker date="1445609155936" expanded="true" signature="5656:5701" placeholder="..." />
+            <marker date="1445609155936" expanded="true" signature="5656:5768" placeholder="..." />
+            <marker date="1445609155936" expanded="true" signature="5789:6451" placeholder="..." />
+            <marker date="1445609155936" expanded="true" signature="5806:6440" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings.php">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.034483">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PageModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/PageView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.133333">
+          <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+          <folding>
+            <marker date="1445609668843" expanded="true" signature="252:681" placeholder="..." />
+            <marker date="1445609668843" expanded="true" signature="281:428" placeholder="..." />
+            <marker date="1445609668843" expanded="true" signature="706:962" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.692308">
+          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PageCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PageDAL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.346153">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <marker date="1445612255124" expanded="true" signature="666:680" placeholder="SELECT * FRO..." />
+            <marker date="1445612255124" expanded="true" signature="1746:1827" placeholder="INSERT INTO ..." />
+            <marker date="1445612255124" expanded="true" signature="2839:2878" placeholder="DELETE FROM ..." />
+            <marker date="1445612255124" expanded="true" signature="2839:2882" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/AdminPanelView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70689654">
-          <caret line="99" column="61" selection-start-line="99" selection-start-column="61" selection-end-line="99" selection-end-column="61" />
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="116" column="46" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="46" />
           <folding>
-            <marker date="1445534441713" expanded="true" signature="2768:3494" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:2825" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3273" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3275" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3284" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3286" placeholder="..." />
-            <marker date="1445534441713" expanded="true" signature="2784:3483" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6531:6639" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6551:6634" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6835:6983" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6854:6982" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="6979:6982" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7069:7795" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7085:7784" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7906:8625" placeholder="..." />
+            <marker date="1445613325729" expanded="true" signature="7922:8614" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/AdminPanelController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5224586">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

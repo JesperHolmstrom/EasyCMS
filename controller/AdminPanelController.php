@@ -23,5 +23,17 @@ class AdminPanelController {
             $result = $this->model->add($pm);
             $this->view->setMessage($result);
         }
+        else if($this->view->userUpdatedAPage() && $this->view->formIsValid()){
+            $pm = $this->view->getPageModel();
+            $oldurl = $this->view->getPageToUpdate();
+            $newurl = $pm->getPageURL();
+            $result = $this->model->update($pm, $oldurl);
+            $this->view->redirectToUpdate($newurl, $result);
+        }
+        else if($this->view->userDeletedAPage()){
+            $page = $this->view->getPageToDelete();
+            $result = $this->model->delete($page);
+            $this->view->redirectToDelete($result);
+        }
     }
 }

@@ -17,15 +17,28 @@ class PageCollection{
 
     public function add(PageModel $page){
         $result = $this->dal->createPage($page);
-        if($result == true){
-            $this->pages[] = $page;
-            $this->selectedPage = $page;
-        }
+        return $result;
+    }
+
+    public function update(PageModel $page, $oldurl){
+        $result = $this->dal->updatePage($page, $oldurl);
+        return $result;
+    }
+
+    public function delete($url){
+        $result = $this->dal->deletePage($url);
         return $result;
     }
 
     public function getPages(){
         return $this->pages;
+    }
+
+    public function getPageByURL($url){
+        foreach($this->pages as $page){
+            if(strcmp($page->getPageURL(), $url) === 0)
+                return $page;
+        }
     }
 
     public function selectPage($url){

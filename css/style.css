@@ -13,16 +13,7 @@ header{
     margin: 0;
     padding-left: 15px;
 }
-#menu {
-    background:#FFF
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position:absolute;
-    left:0; top:100px; bottom: 0;
-    width: 200px;
-    border-right: 1px solid #2580a2;
-}
+
 footer{
     background-color: #2580a2;
     text-align: center;
@@ -41,17 +32,52 @@ footer a{
     color: #FFF;
 }
 #content {
-    background:#FFF
-    border-top: 1px solid #2580a2;
+    background:#FFF;
+    border-left: 1px solid #2580a2;
     position: absolute;
     left:200px; top:100px; right:0; bottom:0;
     padding-left: 20px;
 }
+
+#menu {
+    background:#FFF
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    left:0; top:100px; bottom: 0;
+    width: 200px;
+    border-right: 1px solid #2580a2;
+}
+
 #menu li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+#menu li input{
+    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+    font-size: 16px;
+    background: #FFF;
+    color: #393939;
+    display: block;
+    margin: 0;
+    padding: 8px 12px;
+    border:0;
+    border-bottom: 1px solid #2580a2;
+    text-decoration: none;
+    font-weight: normal;
+    width: 200px;
+    text-align:left;
+}
+#menu li input:hover {
+    background: #2580a2;
+    color: #fff;
+    padding-bottom: 8px;
+}
+#menu li #submenu{
+     padding-left:30px;
+ }
 #menu a {
     border-bottom: 1px solid #2580a2;
     color: #393939;

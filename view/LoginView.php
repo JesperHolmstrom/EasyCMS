@@ -11,7 +11,7 @@ class LoginView {
 	 * @var string
 	 */
 	private static $login = "LoginView::Login";
-	private static $logout = "LoginView::Logout";
+	private static $logout;
 	private static $name = "LoginView::UserName";
 	private static $password = "LoginView::Password";
 	private static $cookieName = "LoginView::CookieName";
@@ -48,6 +48,7 @@ class LoginView {
 	 */
 	public function __construct(\model\LoginModel $model) {
 		self::$sessionSaveLocation .= \Settings::APP_SESSION_NAME;
+		self::$logout = \Settings::LOGOUT;
 		$this->model = $model;
 	}
 
@@ -159,7 +160,7 @@ class LoginView {
 		}
 
 		//generate HTML
-		return $this->getLogoutButtonHTML($message);
+		return $this->getLoginMessageHTML($message);
 	}
 
 	/**
@@ -226,11 +227,8 @@ class LoginView {
 		}
 	}
 
-	private function getLogoutButtonHTML($message) {
-		return "<form method='post' >
-			<p id='" . self::$messageId . "'>$message</p>
-			<input type='submit' name='" . self::$logout . "' value='logout'/>
-			</form>";
+	private function getLoginMessageHTML($message) {
+		return "<p id='" . self::$messageId . "'>$message</p>";
 	}
 
 	private function generateLoginFormHTML($message) {

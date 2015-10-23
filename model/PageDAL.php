@@ -68,4 +68,37 @@ class PageDAL
         }
     }
 
+    public function updatePage(PageModel $page, $oldurl)
+    {
+        $this->connect();
+        $oldurl = '"'.$this->db->real_escape_string($oldurl).'"';
+        $url = '"'.$this->db->real_escape_string($page->getPageURL()).'"';
+        $title = '"'.$this->db->real_escape_string($page->getPageTitle()).'"';
+        $content = '"'.$this->db->real_escape_string($page->getPageContent()).'"';
+
+        //MySqli Insert Query
+        $update_row = $this->db->query("UPDATE ".self::$table." SET url=$url ,title=$title, content=$content WHERE url=$oldurl");
+
+        if($update_row){
+            return $update_row;
+        }else{
+            return $this->db->error;
+        }
+    }
+
+    public function deletePage($url)
+    {
+        $this->connect();
+        $urlToDelete = '"'.$this->db->real_escape_string($url).'"';
+
+        //MySqli Insert Query
+        $delete_row = $this->db->query("DELETE FROM ".self::$table." WHERE url=$urlToDelete");
+
+        if($delete_row){
+            return $delete_row;
+        }else{
+            return $this->db->error;
+        }
+    }
+
 }
