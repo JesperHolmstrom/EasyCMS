@@ -37,6 +37,7 @@ footer a{
     position: absolute;
     left:200px; top:100px; right:0; bottom:0;
     padding-left: 20px;
+    overflow:auto;
 }
 
 #menu {
