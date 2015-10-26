@@ -9,10 +9,13 @@ class PageCollection{
     public function __construct(PageDAL $dal){
         $this->dal = $dal;
         $values = $this->dal->getPages();
-        foreach($values as $value){
-            $this->pages[] = $value;
+        if($values){
+
+            foreach($values as $value){
+                $this->pages[] = $value;
+            }
+            $this->selectedPage = $this->pages[0];
         }
-        $this->selectedPage = $this->pages[0];
     }
 
     public function add(PageModel $page){
@@ -26,8 +29,12 @@ class PageCollection{
     }
 
     public function delete($url){
-        $result = $this->dal->deletePage($url);
-        return $result;
+        if(count($this->pages)>1){
+            $result = $this->dal->deletePage($url);
+            return $result;
+        }
+        else
+            return \Settings::DELETE_ERROR;
     }
 
     public function getPages(){

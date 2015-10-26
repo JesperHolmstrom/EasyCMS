@@ -174,6 +174,8 @@ class AdminPanelView{
     public function setMessage($message){
         if($message == "1")
             $this->message = "Successful!";
+        else if($message == \Settings::DELETE_ERROR)
+            $this->message = "You can not delete the last page.";
         else
             $this->message = $message;
     }

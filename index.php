@@ -7,6 +7,7 @@ require_once("Settings.php");
 require_once("controller/AdminPanelController.php");
 require_once("controller/LoginController.php");
 require_once("controller/PageController.php");
+require_once("controller/MasterController.php");
 
 require_once("view/LayoutView.php");
 require_once("view/PageView.php");
@@ -34,11 +35,10 @@ $av = new \view\AdminPanelView($pages);
 $pv = new \view\PageView($pages);
 $pc = new \controller\PageController($pages, $pv);
 $ac = new \controller\AdminPanelController($av, $pages);
+$mc = new \controller\MasterController($m, $v,$ac,$pc,$c);
 
-//Controller must be run first since state is changed
-$ac->doControl();
-$c->doControl();
-$pc->doControl();
+
+$mc->doControl();
 
 //Generate output
 $lv = new \view\LayoutView($pages);
