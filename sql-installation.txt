@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `cms` (
+  `url` varchar(25) NOT NULL,
+  `title` varchar(35) NOT NULL,
+  `content` varchar(10000) NOT NULL,
+  UNIQUE KEY `url` (`url`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `cms` (`url`, `title`, `content`) VALUES
+('home', 'Home', 'Congratulations on installing EasyCMS');
