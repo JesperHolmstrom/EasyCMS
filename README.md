@@ -35,8 +35,11 @@ Admin is authenticated.
 #####Alternate Scenarios
 
 5a. Admin provides invalid information(Duplicate url, To long url/title/content)
+
 1. The System provides an error message to the Admin.
+
 6a. The system could not add a new Page(Could not connect to database).
+
 1.System presents an error message
 
 ###UC2 - Read Page
@@ -56,6 +59,7 @@ System - Handles the read request.
 #####Alternate Scenarios
 
 3a. User tries to view a page that does not exist. (By URL manipulation).
+
 1. The System shows the start page.
 
 ###UC3 - Update page
@@ -81,10 +85,15 @@ Admin is authenticated.
 #####Alternate Scenarios
 
 7a. Admin changes the url of the page and that url already exists.
+
 1. The System provides an error message to the Admin.
+
 7b. Admin changes the url of the page and that url don't already exist.
+
 1. The System updates the url and redirects the Admin to the new url and shows a message saying the update was successful.
+
 7c. Admin changes some value in the form and it does not meet the length requirements of title/url/content.
+
 1. The system shows an error message to the Admin.
 
 ###UC4 - Delete page
@@ -110,8 +119,11 @@ Admin is authenticated.
 #####Alternate Scenarios
 
 7a. Admin does not confirm that he wants to delete the page.
+
 1. Nothing is deleted.
+
 8a. There is only one remaining page.
+
 1. The System does not delete the page and shows a message to the Admin saying that it is not possible to delete the last page.
 
 ##Testing
@@ -144,7 +156,9 @@ Admin creates a page. Page is not created and an error message is shown.
 
 #####Input:
 Fill in the form with: url = anurl, content = Some content.
+
 Leave title blank.
+
 Press 'Create Page'.
 
 #####Output:
@@ -156,7 +170,9 @@ Admin creates a page. Page is not created and an error message is shown.
 
 #####Input:
 Fill in the form with:, url = anurl, content = Some content.
+
 Fill in title with a string < 3 characters or > 35 characters.
+
 Press 'Create Page'.
 
 #####Output:
@@ -168,7 +184,9 @@ Admin creates a page. Page is not created and an error message is shown.
 
 #####Input:
 Fill in the form with: title = Title, content = Some content.
+
 Leave url blank.
+
 Press 'Create Page'.
 
 #####Output:
@@ -180,7 +198,9 @@ Admin creates a page. Page is not created and an error message is shown.
 
 #####Input:
 Fill in the form with:, title = Title, content = Some content.
+
 Fill in url with a string < 3 characters or > 35 characters.
+
 Press 'Create Page'.
 
 #####Output:
@@ -192,7 +212,9 @@ Admin creates a page. Page is not created and an error message is shown.
 
 #####Input:
 Fill in the form with: title = Title, url = anurl.
+
 Leave content blank.
+
 Press 'Create Page'.
 
 #####Output:
@@ -204,7 +226,9 @@ Admin creates a page. Page is not created and an error message is shown.
 
 #####Input:
 Fill in the form with:, title = Title, url = anurl.
+
 Fill in content with < 3 characters or > 10000 characters.
+
 Press 'Create Page'.
 
 #####Output:
@@ -216,12 +240,16 @@ Admin updates a page. Page is updated and a message is shown saying the operatio
 
 #####Input:
 Press Update Page and choose one of the pages.
+
 Change the content, url and title (3 < title.length > 35, 3 < url.length > 25, 3 < content.length > 10000 )
+
 Press 'Update Page'.
 
 #####Output:
 Page is updated with the new values.
+
 The menu to the left is updated with the new title if it was changed.
+
 The user is redirected to the new url if the url was changed.
 
 ###Test case 2.2 Updating page failed because of duplicate url
@@ -230,11 +258,14 @@ Admin updates a page. Page is not updated and a message is shown saying the oper
 
 #####Input:
 Press Update Page and choose one of the pages.
+
 Change the url to one that already exists.
+
 Press 'Update Page'.
 
 #####Output:
 Page is not updated.
+
 "Duplicate entry 'apage' for key 'url'" message is shown.
 
 ###Test case 3.1 Successfully delete a page
@@ -243,10 +274,12 @@ Admin deletes a page. Page is deleted and a message is shown saying the operatio
 
 #####Input:
 Press Delete Page and choose one of the pages.
+
 Press 'Yes,delete this page'.
 
 #####Output:
 Page is deleted.
+
 The menu to the left is updated and does not contain the deleted page.
 
 ###Test case 3.2 Deleting page failed because there was not enough pages.
@@ -255,11 +288,14 @@ Admin tries to delete a page. Page is not deleted and a message is shown saying 
 
 #####Input:
 Delete pages until there is only 1 page left.
+
 Press Delete Page and choose the last page.
+
 Press 'Yes,delete this page'.
 
 #####Output:
 Page is not deleted.
+
 "You can not delete the last page." message is shown.
 
 ##Installation and configuration
