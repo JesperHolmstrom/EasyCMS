@@ -1,12 +1,4 @@
 <?php
-/**
-  * Solution for assignment 2
-  * @author Daniel Toll
-  */
-/**
- * The settings file contains installation specific information
- * 
- */
 class Settings {
 
 
@@ -16,12 +8,31 @@ class Settings {
 	const APP_SESSION_NAME = "LoginLab";
 
 	/**
+	 * Path for the adminpanel
+	 */
+	const ADMIN_PANEL_NAME = "adminpanel";
+
+	/**
+	 * Title of the Page, this will show on every page.
+	 */
+	const HOMEPAGE_TITLE = "EasyCMS";
+
+	/**
+	 * URL variables for creating/reading/updating/deleting a page
+	 */
+	const CREATE_PAGE = "create";
+	const READ_PAGE = "read";
+	const UPDATE_PAGE = "update";
+	const DELETE_PAGE = "delete";
+	const LOGOUT = "logout";
+
+	/**
 	 * Database connection settings
 	 */
-	const DB_HOST = "localhost";
+	const DB_HOST = "127.0.0.1:3306";
 	const DB_USER = "root";
-	const DB_PASS = "password";
-	const DB_TABLE = "PHPCMS";
+	const DB_PASS = "";
+	const DB_TABLE = "cms";
 	
 	/**
 	 * Username of admin
@@ -42,7 +53,13 @@ class Settings {
 	 * Salt for creating temporary passwords
 	 * Should be a random string like "feje3-#GS"
 	 */
-	const SALT = "#¤%#¤%MASFSFSDF";
+	const SALT = "";
+
+	/**
+	 * ERROR CODES
+	 */
+
+	const DELETE_ERROR = "DEL_ERR";
 
 	/**
 	 * Show errors 

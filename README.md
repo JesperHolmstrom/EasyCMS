@@ -2,6 +2,18 @@
 
 Author: Jesper Holmström
 
+##Vision
+
+ *Problem to solve
+ A lot of people know how to create simple HTML pages and style them, but it is tedious to manage big sites with a lot of .html documents, especially when changing the layout of the site.
+ Large CMS's like Wordpress/Joomla can be hard to setup and the user does not need the functionality it offers. A simple lightweight CMS is needed.
+
+ *What is EasyCMS?
+ This projects is intended to be used by people who knows how to create HTML pages but want an easier way of doing so.
+ After installation it should be quick and easy to edit the website contents through some sort of Admin Panel.
+ It should be possible to edit the entire sites layout without manually editing every single page of the site.
+ The CMS should allow for CREATING/READING/UPDATING/DELETING content of the site.
+
 ##Requirements
  * UC1 - Create new Page
 
@@ -104,7 +116,152 @@ Author: Jesper Holmström
     1. The System does not delete the page and shows a message to the Admin saying that it is not possible to delete the last page.
 
 ##Testing
- * To be uploaded
+ * Test case 1.1 Successfully create new Page
+
+ Admin creates a page. Page is created and a message is shown.
+
+ Input:
+  Fill in the form with: title = A new page, url = anurl, content = Some content.
+  Press 'Create Page'.
+
+ Output:
+  "Successful" message is shown.
+
+ * Test case 1.2 Fail to create duplicate page
+
+ Admin creates a page. Page is not created and an error message is shown.
+
+  Input:
+   Test case 1.1.
+   Fill in the form with: title = A new page, url = anurl, content = Some content.
+   Press 'Create Page'.
+
+  Output:
+   "Duplicate entry 'anurl' for key 'url'" message is shown.
+
+ * Test case 1.3 Fail to create page with no title
+
+  Admin creates a page. Page is not created and an error message is shown.
+
+   Input:
+    Fill in the form with: url = anurl, content = Some content.
+    Leave title blank.
+    Press 'Create Page'.
+
+   Output:
+    "You need to fill in a Title." message is shown.
+
+ * Test case 1.4 Fail to create page with invalid title
+
+   Admin creates a page. Page is not created and an error message is shown.
+
+    Input:
+     Fill in the form with:, url = anurl, content = Some content.
+     Fill in title with a string < 3 characters or > 35 characters.
+     Press 'Create Page'.
+
+    Output:
+     "Title need to be between 3 and 35 characters long." message is shown.
+
+ * Test case 1.5 Fail to create page with no url
+
+   Admin creates a page. Page is not created and an error message is shown.
+
+    Input:
+     Fill in the form with: title = Title, content = Some content.
+     Leave url blank.
+     Press 'Create Page'.
+
+    Output:
+     "You need to fill in an URL." message is shown.
+
+  * Test case 1.6 Fail to create page with invalid url
+
+    Admin creates a page. Page is not created and an error message is shown.
+
+     Input:
+      Fill in the form with:, title = Title, content = Some content.
+      Fill in url with a string < 3 characters or > 35 characters.
+      Press 'Create Page'.
+
+     Output:
+      "URL need to be between 3 and 25 characters long." message is shown.
+
+ * Test case 1.7 Fail to create page with no content
+
+   Admin creates a page. Page is not created and an error message is shown.
+
+    Input:
+     Fill in the form with: title = Title, url = anurl.
+     Leave content blank.
+     Press 'Create Page'.
+
+    Output:
+     "You need to fill in some content." message is shown.
+
+  * Test case 1.8 Fail to create page with invalid content
+
+    Admin creates a page. Page is not created and an error message is shown.
+
+     Input:
+      Fill in the form with:, title = Title, url = anurl.
+      Fill in content with < 3 characters or > 10000 characters.
+      Press 'Create Page'.
+
+     Output:
+      "Content need to be between 3 and 10000 characters long." message is shown.
+
+  * Test case 2.1 Successfully update a page
+
+    Admin updates a page. Page is updated and a message is shown saying the operation was successful.
+
+     Input:
+      Press Update Page and choose one of the pages.
+      Change the content, url and title (3 < title.length > 35, 3 < url.length > 25, 3 < content.length > 10000 )
+      Press 'Update Page'.
+
+     Output:
+      Page is updated with the new values.
+      The menu to the left is updated with the new title if it was changed.
+      The user is redirected to the new url if the url was changed.
+
+  * Test case 2.2 Updating page failed because of duplicate url
+
+    Admin updates a page. Page is not updated and a message is shown saying the operation was not successful.
+
+     Input:
+      Press Update Page and choose one of the pages.
+      Change the url to one that already exists.
+      Press 'Update Page'.
+
+     Output:
+      Page is not updated.
+      "Duplicate entry 'apage' for key 'url'" message is shown.
+
+  * Test case 3.1 Successfully delete a page
+
+    Admin deletes a page. Page is deleted and a message is shown saying the operation was successful.
+
+     Input:
+      Press Delete Page and choose one of the pages.
+      Press 'Yes,delete this page'.
+
+     Output:
+      Page is deleted.
+      The menu to the left is updated and does not contain the deleted page.
+
+  * Test case 3.2 Deleting page failed because there was not enough pages.
+
+    Admin tries to delete a page. Page is not deleted and a message is shown saying the operation was not successful.
+
+     Input:
+      Delete pages until there is only 1 page left.
+      Press Delete Page and choose the last page.
+      Press 'Yes,delete this page'.
+
+     Output:
+      Page is not deleted.
+      "You can not delete the last page." message is shown.
 
 ##Installation and configuration
 
@@ -112,5 +269,6 @@ Author: Jesper Holmström
  * Create a data folder
   * The data folder must be inaccessable to Apache but accessable to PHP
  * Create a MySQL database
+  * Run the sql code found in sql-installation.txt in your database. (Replace 'cms' with your table name)
  * Edit the information in Settings.php
  
