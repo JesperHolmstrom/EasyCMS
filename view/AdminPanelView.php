@@ -2,6 +2,10 @@
 namespace view;
 
 
+/**
+ * Class AdminPanelView
+ * @package view
+ */
 class AdminPanelView{
 
     private static $title = "AdminPanelView::Title";
@@ -26,6 +30,10 @@ class AdminPanelView{
     }
 
 
+    /**
+     * @return string - The HTML for the AdminPanelView
+     * Creates and returns an HTML Admin Panel
+     */
     public function response(){
         if($this->userWantsToCreatePage())
             return $this->getCreatePageHTML();
@@ -33,47 +41,59 @@ class AdminPanelView{
             $page = $this->pages->getPageByURL($this->getPageToUpdate());
             if($page != null)
                 return $this->getUpdatePageHTML($page);
-
         }
         else if($this->userWantsToUpdatePage())
             return "<h2><-- Please choose a page to update in the menu.</h2>";
-        else if($this->userWantsToDeletePage() && $this->userChoseAPageToDelete()){
+        else if($this->userWantsToDeletePage() && $this->userChoseAPageToDelete())
             return $this->getDeleteButtonHTML();
-        }
         else if($this->userWantsToDeletePage())
             return "<label>".$this->message."</label><br><h2><-- Please choose a page to delete in the menu.</h2>";
     }
 
+    /**
+     * @return string - The HTML representation of the Admin Panel Menu
+     * Creates and returns a HTML Menu
+     */
     public function getMenuHTML(){
         $list = '<li><a href="?adminpanel&'.\Settings::CREATE_PAGE.'">Create new Page</a></li>
                  <li><a href="?adminpanel&'.\Settings::UPDATE_PAGE.'">Update Page</a></li>';
 
+        //If the user wants to update the page, add a submenu with all pages so that the user can choose a page to update
         if($this->userWantsToUpdatePage()){
             $collection = $this->pages->getPages();
-
             foreach($collection as $page){
                 $list .= "\n<li><a href='?adminpanel&".\Settings::UPDATE_PAGE."=". $page->getPageURL() . "' id='submenu'>".$page->getPageTitle()."</a></li>";
             }
         }
         $list .= '<li><a href="?adminpanel&'.\Settings::DELETE_PAGE.'">Delete Page</a></li>';
 
+        //If the user wants to delete the page, add a submenu with all pages so that the user can choose a page to delete
         if($this->userWantsToDeletePage()){
             $collection = $this->pages->getPages();
-
             foreach($collection as $page){
                 $list .= "\n<li><a href='?adminpanel&".\Settings::DELETE_PAGE."=". $page->getPageURL() . "' id='submenu'>".$page->getPageTitle()."</a></li>";
             }
         }
 
         $list .= $this->getLogoutButtonHTML();
-
         return $list;
     }
+
+    /**
+     * @param $url - The URL to redirect to
+     * @param $message - The Message to save
+     * Saves a message in a session and then redirects the page to the updated URL
+     */
     public function redirectToUpdate($url, $message){
         $_SESSION[self::$messageSaveLocation] = $message;
         $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']."?".\Settings::ADMIN_PANEL_NAME . "&" . \Settings::UPDATE_PAGE."=" . $url;
         header("Location: $actual_link");
     }
+
+    /**
+     * @param $message - The Message to save
+     * Saves a Message in a session and then redirects the page to the Delete page
+     */
     public function redirectToDelete($message){
         $_SESSION[self::$messageSaveLocation] = $message;
         $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']."?".\Settings::ADMIN_PANEL_NAME . "&" . \Settings::DELETE_PAGE;
@@ -89,42 +109,13 @@ class AdminPanelView{
         return "";
     }
 
-    public function userWantsToCreatePage(){
-        return isset($_GET[\Settings::CREATE_PAGE]);
-    }
-    public function userWantsToUpdatePage(){
-        return isset($_GET[\Settings::UPDATE_PAGE]);
-    }
-    public function userWantsToDeletePage(){
-        return isset($_GET[\Settings::DELETE_PAGE]);
-    }
-    public function userCreatedAPage(){
-        return isset($_POST[self::$create]);
-    }
-    public function userUpdatedAPage(){
-        return isset($_POST[self::$update]);
-    }
-    public function userDeletedAPage(){
-        return isset($_POST[self::$delete]);
-    }
-    public function userChoseAPageToUpdate(){
-        return strlen($_GET[\Settings::UPDATE_PAGE]) >= 3;
-    }
-    public function userChoseAPageToDelete(){
-        return strlen($_GET[\Settings::DELETE_PAGE]) >= 3;
-    }
-    public function getPageToUpdate(){
-        if(isset($_GET[\Settings::UPDATE_PAGE]))
-            return $_GET[\Settings::UPDATE_PAGE];
-    }
-    public function getPageToDelete(){
-        if(isset($_GET[\Settings::DELETE_PAGE]))
-            return $_GET[\Settings::DELETE_PAGE];
-    }
-
+    /**
+     * @return bool - Returns true if the form is valid, false if not.
+     * Checks whether the form has valid input or not. If the input was not valid, save message saying what was wrong
+     */
     public function formIsValid(){
         $message = "";
-
+        //TODO There are some magic numbers here that I don't like :(
         if(!isset($_POST[self::$title]) || strlen($this->getFormTitle()) == 0) {
             $message .= "You need to fill in a Title.";
         }
@@ -152,23 +143,6 @@ class AdminPanelView{
             $this->setMessage($message);
             return false;
         }
-    }
-
-    public function getFormTitle(){
-        if(isset($_POST[self::$title]))
-            return $_POST[self::$title];
-    }
-    public function getFormURL(){
-        if(isset($_POST[self::$url]))
-            return $_POST[self::$url];
-    }
-    public function getFormContent(){
-        if(isset($_POST[self::$content]))
-            return $_POST[self::$content];
-    }
-
-    public function getPageModel(){
-        return new \model\PageModel($this->getFormTitle(),$this->getFormURL(),$this->getFormContent());
     }
 
     public function setMessage($message){
@@ -236,4 +210,55 @@ class AdminPanelView{
 			</form>
 		";
     }
+
+    //Getters
+    public function getFormTitle(){
+        if(isset($_POST[self::$title]))
+            return $_POST[self::$title];
+    }
+    public function getFormURL(){
+        if(isset($_POST[self::$url]))
+            return $_POST[self::$url];
+    }
+    public function getFormContent(){
+        if(isset($_POST[self::$content]))
+            return $_POST[self::$content];
+    }
+    public function getPageModel(){
+        return new \model\PageModel($this->getFormTitle(),$this->getFormURL(),$this->getFormContent());
+    }
+    public function getPageToUpdate(){
+        if(isset($_GET[\Settings::UPDATE_PAGE]))
+            return $_GET[\Settings::UPDATE_PAGE];
+    }
+    public function getPageToDelete(){
+        if(isset($_GET[\Settings::DELETE_PAGE]))
+            return $_GET[\Settings::DELETE_PAGE];
+    }
+    //Check if $_GET/$_POST variables are set
+    public function userWantsToCreatePage(){
+        return isset($_GET[\Settings::CREATE_PAGE]);
+    }
+    public function userWantsToUpdatePage(){
+        return isset($_GET[\Settings::UPDATE_PAGE]);
+    }
+    public function userWantsToDeletePage(){
+        return isset($_GET[\Settings::DELETE_PAGE]);
+    }
+    public function userChoseAPageToUpdate(){
+        return strlen($_GET[\Settings::UPDATE_PAGE]) >= 3;
+    }
+    public function userChoseAPageToDelete(){
+        return strlen($_GET[\Settings::DELETE_PAGE]) >= 3;
+    }
+    public function userCreatedAPage(){
+        return isset($_POST[self::$create]);
+    }
+    public function userUpdatedAPage(){
+        return isset($_POST[self::$update]);
+    }
+    public function userDeletedAPage(){
+        return isset($_POST[self::$delete]);
+    }
+
 }

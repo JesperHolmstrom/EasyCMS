@@ -24,23 +24,25 @@ if (Settings::DISPLAY_ERRORS) {
 //session must be started before LoginModel is created
 session_start();
 
-//Dependency injection
-$m = new \model\LoginModel();
-$v = new \view\LoginView($m);
-$c = new \controller\LoginController($m, $v);
+//Create the models
+$lm = new \model\LoginModel();
 $pd = new \model\PageDAL();
+$pages = new \model\PageCollection($pd); //Dependency inject the DAL
 
-$pages = new \model\PageCollection($pd);
-$av = new \view\AdminPanelView($pages);
-$pv = new \view\PageView($pages);
+//Create the views
+$v = new \view\LoginView($lm); 			//Dependency inject the LoginModel
+$av = new \view\AdminPanelView($pages); //Dependency inject the PageCollection
+$pv = new \view\PageView($pages);		//Dependency inject the PageCollection
+
+//Create the controllers
+$c = new \controller\LoginController($lm, $v);
 $pc = new \controller\PageController($pages, $pv);
 $ac = new \controller\AdminPanelController($av, $pages);
-$mc = new \controller\MasterController($m, $v,$ac,$pc,$c);
-
+$mc = new \controller\MasterController($lm, $v,$ac,$pc,$c);
 
 $mc->doControl();
 
 //Generate output
 $lv = new \view\LayoutView($pages);
-$lv->render($m->isLoggedIn($v->getUserClient()), $v, $pv, $av);
+$lv->render($lm->isLoggedIn($v->getUserClient()), $v, $pv, $av);
 

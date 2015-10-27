@@ -14,13 +14,12 @@ class MasterController {
         $this->loginController = $lc;
         $this->pageController =  $pc;
         $this->adminController = $ac;
-
     }
 
     public function doControl() {
 
+        //If the user is authenticated, he can create/update/delete pages
         $userClient = $this->view->getUserClient();
-
         if ($this->model->isLoggedIn($userClient)) {
             $this->adminController->doControl();
         }

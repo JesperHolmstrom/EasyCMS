@@ -17,6 +17,11 @@ class AdminPanelController {
         $this->model = $model;
     }
 
+    /*
+     * DoControl handles the Create/Update/Delete operations in the Admin Panel.
+     * It first retreives the page and do the operation and tells the AdminPanelView what the outcome was.
+     * For Update and Delete it also redirects the page so that the page is updated with the new values.
+     */
     public function doControl() {
         if($this->view->userCreatedAPage() && $this->view->formIsValid()){
             $pm = $this->view->getPageModel();
